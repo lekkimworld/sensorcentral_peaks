@@ -1,0 +1,17 @@
+{
+  "name": "sensorcentral_peaks",
+  "version": "1.0.0",
+  "description": "Find temperature peaks in a given date/time range and correlate with other sensor value for found date/times",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "moment-timezone": "^0.5.23",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mikkel Heisterberg",
+  "license": "MIT"
+}
