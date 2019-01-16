@@ -3,11 +3,11 @@ const fetch = require('node-fetch');
 require('dotenv').config()
 
 const prometheus = process.env.PROMETHEUS_URL;
-const sensorQuery = 'sensor_heatpump_forwards{deviceId="60:01:94:5D:4C:9D"}';
-const step = '2m';
-const start = '2019-01-12T23:00:00.000Z';
-const end = '2019-01-13T23:00:00.000Z';
-const compareSensorQuery = 'sensor_outside{deviceId="60:01:94:5D:4C:9D"}';
+const sensorQuery = process.env.SENSOR_QUERY || 'sensor_heatpump_forwards{deviceId="60:01:94:5D:4C:9D"}';
+const step = process.env.STEP || '2m';
+const start = process.env.START || '2019-01-11T23:00:00.000Z';
+const end = process.env.END || '2019-01-13T23:00:00.000Z';
+const compareSensorQuery = process.env.COMPARE_SENSOR_QUERY || 'sensor_outside{deviceId="60:01:94:5D:4C:9D"}';
 
 const fetchArgs = {
 	'headers': {
